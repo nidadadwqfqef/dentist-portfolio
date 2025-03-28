@@ -36,7 +36,7 @@ const testimonials = [
 const TestimonialsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
+  const cardsContainerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
         duration: 0.7,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: cardsRef.current,
+          trigger: cardsContainerRef.current,
           start: "top 70%",
         }
       }
@@ -116,13 +116,13 @@ const TestimonialsSection = () => {
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-dental-purple rounded-full"></span>
         </h2>
         
-        <div ref={cardsRef} className="relative">
-          <div className="mx-auto max-w-3xl">
+        <div ref={cardsContainerRef} className="relative h-[500px]"> {/* Fixed height container */}
+          <div className="mx-auto max-w-3xl relative h-full"> {/* Relative positioning and full height */}
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index}
                 className={`testimonial-card absolute inset-0 bg-white p-8 rounded-xl shadow-lg transition-all duration-500 ${
-                  index === activeIndex ? "z-10 opacity-100 scale-100" : "opacity-0 scale-95"
+                  index === activeIndex ? "z-10 opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
                 }`}
               >
                 <CardContent className="pt-6">
@@ -148,7 +148,7 @@ const TestimonialsSection = () => {
           </div>
           
           {/* Testimonial navigation dots */}
-          <div className="flex justify-center mt-[400px] space-x-2">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 mt-4">
             {testimonials.map((_, index) => (
               <button
                 key={index}
