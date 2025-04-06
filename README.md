@@ -8,7 +8,7 @@ Landing page animated and modern for a dental clinic, built with ❤️ using:
 
 ## 🔗 Live Preview
 
-[Click here to view the demo](https://your-vercel-link.vercel.app)
+[Click here to view the demo](https://dentist-portfolio-iota.vercel.app/)
 
 ## 📄 Pages
 
