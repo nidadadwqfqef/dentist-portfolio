@@ -22,7 +22,7 @@ const Contact = () => {
       <div className="content pt-32 pb-0">
         <div className="container mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 relative">
-            <span className="relative z-10">Contact Us</span>
+            <span className="relative z-10">Coming Soon</span>
             <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-dental-purple rounded-full"></span>
           </h1>
         </div>

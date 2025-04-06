@@ -26,7 +26,7 @@ const Services = () => {
           </h1>
           
           <div className="prose prose-lg max-w-none">
-            <p>This is the Services page content.</p>
+            <p>Coming Soon</p>
           </div>
         </div>
       </div>
